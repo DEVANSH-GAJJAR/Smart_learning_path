@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learning Style Quiz</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      max-width: 600px;
+      margin: 0; /* Remove margin for full background effect */
+      padding: 20px;
+      border-radius: 10px;
+      background: url('"E:\DEVPOST-5\images\devpost5(2).jpg"'); /* Single background image */
+      background-size: cover; /* Cover the entire background */
+      background-position: center; /* Center the background image */
+      background-repeat: no-repeat; /* Prevent repeating the image */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9); /* Slightly transparent background for readability */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      margin: 10px 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .visual {
+      background-color: #4caf50;
+      color: white;
+    }
+    .auditory {
+      background-color: #2196f3;
+      color: white;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    #result {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-top: 30px;
+      text-align: center;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Find Out Your Learning Style</h2>
+
+<div id="quiz-container"></div>
+<div id="result"></div>
+
+<script>
+const questions = [
+  {
+    question: "How do you prefer to learn something new?",
+    visual: "By seeing pictures or diagrams.",
+    auditory: "By listening to explanations."
+  },
+  {
+    question: "What's easier to remember?",
+    visual: "Images or written instructions.",
+    auditory: "Spoken instructions or music."
+  },
+  {
+    question: "When studying, you prefer...",
+    visual: "Highlighting and drawing mind maps.",
+    auditory: "Reading aloud or listening to recordings."
+  },
+  {
+    question: "In a classroom, you learn best when...",
+    visual: "The teacher uses slides or visuals.",
+    auditory: "The teacher explains with detailed speech."
+  },
+  {
+    question: "When watching a tutorial, you prefer...",
+    visual: "Seeing diagrams and animations.",
+    auditory: "Hearing the instructor talk it through."
+  }
+];
+
+let currentQuestion = 0;
+let visualScore = 0;
+let auditoryScore = 0;
+
+const container = document.getElementById('quiz-container');
+const resultDiv = document.getElementById('result');
+
+// Function to show questions and handle user input will go here
+</script>
+</body>
+</html>

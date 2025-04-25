@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learning Style Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 10px;
+      background: #ec16be60;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    button {
+      margin: 10px 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .visual { background-color: #4caf50; color: white; }
+    .auditory { background-color: #2196f3; color: white; }
+    #result {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Find Out Your Learning Style</h2>
+
+<div id="quiz-container"></div>
+<div id="result"></div>
+
+<script>
+const questions = [
+  {
+    question: "How do you prefer to learn something new?",
+    visual: "By seeing pictures or diagrams.",
+    auditory: "By listening to explanations."
+  },
+  {
+    question: "What's easier to remember?",
+    visual: "Images or written instructions.",
+    auditory: "Spoken instructions or music."
+  },
+  {
+    question: "When studying, you prefer...",
+    visual: "Highlighting and drawing mind maps.",
+    auditory: "Reading aloud or listening to recordings."
+  },
+  {
+    question: "In a classroom, you learn best when...",
+    visual: "The teacher uses slides or visuals.",
+    auditory: "The teacher explains with detailed speech."
+  },
+  {
+    question: "When watching a tutorial, you prefer...",
+    visual: "Seeing diagrams and animations.",
+    auditory: "Hearing the instructor talk it through."
+  }
+];
+
+let currentQuestion = 0;
+let visualScore = 0;
+let auditoryScore = 0;
+
+const container = document.getElementById('quiz-container');
+const resultDiv = document.getElementById('result');
+
+function showQuestion() {
+  if (currentQuestion < questions.length) {
+    const q = questions[currentQuestion];
+    container.innerHTML = `
+      <div class="question">
+        <p><strong>Q${currentQuestion + 1}:</strong> ${q.question}</p>
+        <button class="visual" onclick="selectAnswer('visual')">${q.visual}</button>
+        <button class="auditory" onclick="selectAnswer('auditory')">${q.auditory}</button>
+      </div>
+    `;
+  } else {
+    showResult();
+  }
+}
+
+function selectAnswer(type) {
+  if (type === 'visual') visualScore++;
+  else if (type === 'auditory') auditoryScore++;
+  currentQuestion++;
+  showQuestion();
+}
+
+function showResult() {
+  let style = '';
+  if (visualScore > auditoryScore) style = 'Visual Learner 🎨';
+  else if (auditoryScore > visualScore) style = 'Auditory Learner 🎧';
+  else style = 'Balanced Learner 🔄';
+
+  container.innerHTML = '';
+  resultDiv.innerHTML = `Your learning style is: <span style="color:#333">${style}</span>`;
+}
+
+showQuestion();
+</script>
+
+</body>
+</html>
