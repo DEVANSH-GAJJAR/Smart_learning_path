@@ -15,7 +15,7 @@ This is a Streamlit app that helps users identify their learning style (Visual, 
 ## 🛠 How to Run
 
 1. Clone the repo:
-2. Install dependencies :- streamlit
+2. Install dependencies :- streamlit , Python v3 and above , IDE like VS CODE (or any other)
 3. run the app :-
 ```bash
 git clone https://github.com/YOUR_USERNAME/smart-learning-path.git
