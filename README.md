@@ -5,7 +5,7 @@ A personalized learning path generator that identifies your learning style and r
 
 This is a Streamlit app that helps users identify their learning style (Visual, Auditory, or Balanced) and provides a personalized set of modules with videos and study suggestions.
 
-## 🚀 Features
+## 🚀 Features of this 
 
 - Simple quiz to detect learning preference
 - Personalized module path with embedded YouTube videos
