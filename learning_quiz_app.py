@@ -1,5 +1,5 @@
 import streamlit as st
-
+#STREAMLIT IS A RENOWED PYTHON LIBRARY
 # --- Page Config ---
 st.set_page_config(
     page_title="Smart Learning Path",
@@ -153,4 +153,5 @@ def generate_learning_plan_text(style):
     ] + plans[style]
 
     return "\n".join(plan_lines)
+
 
